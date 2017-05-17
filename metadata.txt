@@ -11,7 +11,7 @@ name=Geo Picker
 qgisMinimumVersion=2.0
 description=A geologic picking tool for conceptual model building
 version=0.1
-author=mmarchildon
+author=Mason Marchildon
 email=mmarchildon@owrc.ca
 
 about=The is a tool designed for picking and viewing on cross-sections for the purpose of geologic model building.
@@ -28,7 +28,7 @@ repository=test
 # Tags are comma separated with spaces allowed
 tags=
 
-homepage=
+homepage=https://github.com/maseology/GeoPicker
 category=Plugins
 icon=icon.png
 # experimental flag
