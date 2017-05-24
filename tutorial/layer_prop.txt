@@ -1,0 +1,5 @@
+Oak Ridges Aquifer;goldenrod;+++
+Newmarket Till;green
+Lower Sediments A;[0,.7,0.5]
+Lower Sediments A;orange
+Weathered bedrock;lightgrey;....

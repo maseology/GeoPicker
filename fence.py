@@ -174,6 +174,7 @@ def addIntervals(xy,stepsize):
     for i in xrange(len(xy)-1):
         dist = lenxy(xy[i],xy[i+1])
         nstp = int(math.ceil(dist/stepsize))
+        if (nstp < 1): nstp=1
         stepsize_adj = dist/nstp
         xyout.append(xy[i])
         for j in range(1,nstp):
