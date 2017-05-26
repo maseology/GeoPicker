@@ -10,7 +10,7 @@
 name=Geo Picker
 qgisMinimumVersion=2.0
 description=A geologic picking tool for conceptual model building
-version=0.1
+version=0.1.1
 author=Mason Marchildon
 email=mmarchildon@owrc.ca
 
