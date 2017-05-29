@@ -16,7 +16,7 @@ Colour can be either entered by their standard names, or by providing `[r, g, b]
 
 ### standard colour names:
 
-![standard named colours](/images/colours_1.png)
+![standard named colours](/doc/images/colours_1.png)
 
 ## Texture schemes
 
@@ -24,9 +24,9 @@ GeoPicker texture schemes follow the same [hatching used in Matplotlib](http://m
 
 ### sample textures:
 
-![standard textures](/images/textures_1.png)
+![standard textures](/doc/images/textures_1.png)
 
 ### combined textures:
 
-By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: ![combined texture](/images/textures_2.png)
+By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: ![combined texture](/doc/images/textures_2.png)
 
