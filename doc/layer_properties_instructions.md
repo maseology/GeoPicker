@@ -28,5 +28,7 @@ GeoPicker texture schemes follow the same [hatching used in Matplotlib](http://m
 
 ### combined textures:
 
-By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: ![combined texture](/doc/images/textures_2.png)
+By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: 
+
+![combined texture](/doc/images/textures_2.png)
 
