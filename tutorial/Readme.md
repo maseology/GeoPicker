@@ -24,7 +24,7 @@ Below is a brief tutorial on the operation of GeoPicker (v0.1)
 
  6. (optional) adjust labelling, colour scheme and texture from file `layer_prop.txt`  
 	Note: layer property file must be kept in same location/directory as the rasters.  
-	For more information on the layer property file, [click here](..\doc\layer_properties_instructions.md).
+	For more information on the layer property file, [click here](../doc/layer_properties_instructions.md).
 
 
 *this is a beta version, please report any bugs*

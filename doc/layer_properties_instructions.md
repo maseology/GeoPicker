@@ -14,19 +14,19 @@ For example, `Aquifer 1;goldenrod;+++` would label the layer as _Aquifer 1_, col
 
 Colour can be either entered by their standard names, or by providing `[r, g, b]` or `[r, g, b, a]` unit colour codes on [0, 1]. For example, the colour orange can be defined as: `[1, 0.5, 0]`.
 
-### standard colours:
+### standard colour names:
 
-![standard named colours](\images\colours_1.png)
+![standard named colours](/images/colours_1.png)
 
 ## Texture schemes
 
-GeoPicker texture schemes follow the same [hatching used in Matplotlib](http://matplotlib.org/examples/pylab_examples/hatch_demo.html). Hatching is fairly simple, and are based on the characters: `-`, `+`, `x`, `\\`, `/`, `*`, `o`, `O`, `.`. The density of the hatching is controlled by the number of characters used in succession.
+GeoPicker texture schemes follow the same [hatching used in Matplotlib](http://matplotlib.org/examples/pylab_examples/hatch_demo.html). Hatching is fairly simple, and are based on the characters: `-`, `+`, `x`, `\`, `/`, `*`, `o`, `O`, `.`. The density of the hatching is controlled by the number of characters used in succession.
 
 ### sample textures:
 
-![standard textures](\images\textures_1.png)
+![standard textures](/images/textures_1.png)
 
 ### combined textures:
 
-By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: ![combined texture](\images\textures_2.png)
+By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: ![combined texture](/images/textures_2.png)
 
