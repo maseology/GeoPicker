@@ -8,7 +8,7 @@ From top to bottom, each layer must be described by the semicolon delimited deta
 
 Note: the third entry `Layer texture` can be omitted if no texture is desired.
 
-For example, `Aquifer 1;goldenrod;+++` would label the layer as _Aquifer 1_, colour the layer as goldenrod (see below)[] and texture the layer with a dense vertical cross-hatch.
+For example, `Aquifer 1;goldenrod;+++` would label the layer as _Aquifer 1_, colour the layer as goldenrod and texture the layer with a dense vertical cross-hatch.
 
 ## Colour schemes
 
@@ -28,7 +28,13 @@ GeoPicker texture schemes follow the same [hatching used in Matplotlib](http://m
 
 ### combined textures:
 
+<<<<<<< HEAD
+By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce:
+
+ ![combined texture](/doc/images/textures_2.png)
+=======
 By combining the texture characters, unique hatching can be developped. For example, the texture code `oox+` would produce: 
 
 ![combined texture](/doc/images/textures_2.png)
+>>>>>>> origin/master
 
