@@ -3,6 +3,8 @@
 
 Below is a brief tutorial on the operation of GeoPicker (v0.1)
 
+ 1. [Download tutorial files](tutorial_files.zip)
+ 
  1. (optional) load basemap vector for reference  
 	use: `basemap.shp`  
 	**Note: All tutorial layers are projected to NAD/83 UTM zone 17N (EPSG:26917)**
