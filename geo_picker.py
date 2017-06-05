@@ -20,7 +20,8 @@
  *                                                                         *
  ***************************************************************************/
 """
-from qgis.core import QGis, QgsProject, QgsMapLayer
+from qgis.core import QGis, QgsProject, QgsMapLayer, QgsMessageLog
+from qgis.gui import QgsMessageBar
 from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication
 from PyQt4.QtGui import QAction, QIcon
 # Initialize Qt resources from file resources.py
@@ -220,20 +221,31 @@ class GeoPicker:
                     group_list.append(groupname)
                     group_xr.append(i)
                     break
-            
+        
+        self.dlg.comboBox.clear()
+        self.dlg.comboBox_2.clear()
         self.dlg.comboBox.addItems(linelayer_list)
         self.dlg.comboBox_2.addItems(group_list)
         
+        if len(linelayer_xr) == 0:
+            self.iface.messageBar().pushMessage("GeoPicker Error", "No cross-section line layer found", level=QgsMessageBar.CRITICAL, duration=3)
+            QgsMessageLog.logMessage("GeoPicker Error: No line layer found")
+            return
+            
+        if len(group_xr) == 0:
+            self.iface.messageBar().pushMessage("GeoPicker Error", "No grouped raster layers found", level=QgsMessageBar.CRITICAL, duration=3)
+            QgsMessageLog.logMessage("GeoPicker Error: No grouped raster layers found")
+            return
+        
         # show the dialog
         self.dlg.show()
+        
         # Run the dialog event loop
         result = self.dlg.exec_()
         # See if OK was pressed
         if result:
-            # output_file = open('C:/Users/mmarchildon/Desktop/GeoPicker/qgis_test/test.txt', 'w')
             selectedLayerIndex = self.dlg.comboBox.currentIndex()
             selectedLayer = layers[linelayer_xr[selectedLayerIndex]]
-            # output_file.write('\n=========== Sections\n' + selectedLayer.name() + '\n' + '\n')
             
             # collect features
             sections = []
@@ -248,20 +260,11 @@ class GeoPicker:
                     vert.append(xy)
                 sections.append(vert)
             
-            # for f in sections:
-                # output_file.write('nVertices: ' + str(len(f)) + '\n')
-                # for v in f:
-                    # for p in v:
-                        # output_file.write(str(p) + ' ')
-                    # output_file.write('\n')
-                # output_file.write('\n')
-            
             # collect rasters    
             selectedRasterNames = []
             # selectedRasterAbstract = []
             for groupname in group_list:
                 if groupname == self.dlg.comboBox_2.currentText():
-                    # output_file.write('\n\n=========== Rasters\n' + groupname + '\n\n')
                     group = root.findGroup(groupname).children()
                     for i in range(0, len(rasterlayer_list)):
                         for layer in group:
@@ -269,10 +272,6 @@ class GeoPicker:
                                 selectedRasterNames.append(layers[rasterlayer_xr[i]].dataProvider().dataSourceUri())
                                 # selectedRasterAbstract.append(layers[rasterlayer_xr[i]].abstract)
                                 break
-            
-            # for r in selectedRasterAbstract:
-                # output_file.write(r.name + '\n')
-            # output_file.close()
             
             fnc = Fence(sections,selectedRasterNames)
             self.fv = Fence_viewer(fence=fnc,title=groupname)
